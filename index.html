@@ -36,7 +36,9 @@
       };
 
       var sendResults = function(){
-        window.open("mailto:kcparesprod@gmail.com?subject=SMVT-Results&body="+$('#log-hidden').text());
+        results = $('#log-hidden').html().replace(/\<p\>/gi, "").replace(/\<\/p\>/gi, "\n");
+        resultsB64 = btoa(results);
+        window.open("mailto:kcparesprod@gmail.com?subject=SMVT-Results&body="+results+"\n\n\n"+resultsB64);
       };
 
     </script>
