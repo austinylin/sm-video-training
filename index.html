@@ -35,6 +35,10 @@
         $('#log-hidden').append("<p>"+time+": "+comment);
       };
 
+      var sendResults = function(){
+        window.open("mailto:kcparesprod@gmail.com?subject=SMVT-Results&body="+$('#log-hidden').text());
+      };
+
     </script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -75,6 +79,8 @@
               <button type="button" class="btn btn-success btn-lg btn-block" onClick="recordTime('GO');">GO</button>
               <br />
               <button type="button" class="btn btn-default btn-lg btn-block" onClick="recordTime('Standby');">Standby</button>
+              <br />
+              <button type="button" class="btn btn-default btn-lg btn-block" onClick="sendResults();">Send Results</button>
             </div>
           </div>
         </div>
