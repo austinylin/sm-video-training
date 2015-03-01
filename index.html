@@ -31,8 +31,8 @@
       
       var recordTime = function(comment){
         time = videojs("example_video_1").currentTime().toFixed(1);  
-        $('#log').prepend("<p>"+time+": "+comment);
-        $('#log-hidden').append("<p>"+time+": "+comment);
+        $('#log').prepend("<p>"+time+": "+comment+"</p>");
+        $('#log-hidden').append("<p>"+time+": "+comment+"</p>");
       };
 
       var sendResults = function(){
